@@ -1,0 +1,10 @@
+{
+
+    "autoload": {
+        "psr-4": {
+            "FormBuilder\\": ["core/", "core/rules"],
+            "Rules\\": ["core/rules"]
+        }
+    }
+
+}
