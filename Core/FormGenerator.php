@@ -24,7 +24,7 @@ class FormGenerator {
         echo '<form method="', $this->method, '" action="', $this->action, '">';
 
             foreach ($this->fields as $field)
-                $field->generateElement();
+                echo $field->getElement();
         
         echo '<input type="submit" />';
 

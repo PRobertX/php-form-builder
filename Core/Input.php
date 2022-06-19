@@ -58,6 +58,6 @@ Abstract class Input {
         return $string;
     }
 
-    abstract public function generateElement();
+    abstract public function getElement();
 
 }

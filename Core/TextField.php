@@ -4,20 +4,22 @@ use FormBuilder\InputErrors as Errors;
 
 class TextField extends Input
 {
-    public function generateElement() 
+    public function getElement() 
     {
 
-        echo '<input type="text"' . $this->attributesToString($this->attributes) . ' />';
+        $element = '<input type="text"' . $this->attributesToString($this->attributes) . ' />';
 
         if (Errors::get($this->attributes['name']))
         {
-            echo '<p>' . Errors::get($this->attributes['name']) . '</p>';
+            $element .= '<p>' . Errors::get($this->attributes['name']) . '</p>';
         }
 
         if ($this->label) 
         {
-            echo '<label for="' . $this->attributes['name'] . '">' . $this->label . '</label>';
+            $element .= '<label for="' . $this->attributes['name'] . '">' . $this->label . '</label>';
         }
+
+        return $element;
 
     }
 }
