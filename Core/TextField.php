@@ -7,7 +7,7 @@ class TextField extends Input
     public function generateElement() 
     {
 
-        echo '<input type="text"' . $this->attributesToString($this->attributes) . '>';
+        echo '<input type="text"' . $this->attributesToString($this->attributes) . ' />';
 
         if (Errors::get($this->attributes['name']))
         {

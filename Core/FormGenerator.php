@@ -26,7 +26,7 @@ class FormGenerator {
             foreach ($this->fields as $field)
                 $field->generateElement();
         
-        echo '<input type="submit"></input>';
+        echo '<input type="submit" />';
 
         echo '</form>';
 
