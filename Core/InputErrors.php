@@ -5,12 +5,12 @@ class InputErrors {
 
     private static $errors = [];
 
-    public static function set($inputName, $error)
+    public static function set(string $inputName, string $error)
     {
         self::$errors[$inputName] = $error;
     }
 
-    public static function get($inputName)
+    public static function get(string $inputName)
     {
         return (isset(self::$errors[$inputName])) ? self::$errors[$inputName] : False;
     }

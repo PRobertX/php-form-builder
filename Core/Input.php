@@ -8,12 +8,12 @@ Abstract class Input {
     protected $label = null;
     protected $content = null;
 
-    public function __construct($nameAttribute)
+    public function __construct(string $nameAttribute)
     {
         $this->attributes['name'] = $nameAttribute;
     }
 
-    public function setAttribute($name, $value = null)
+    public function setAttribute(string $name, string $value = null)
     {
         if ($value) 
             $this->attributes[$name] = $value;
@@ -23,13 +23,13 @@ Abstract class Input {
         return $this;
     }
 
-    public function addRule($rules)
+    public function addRule(object $rule)
     {
-        array_push($this->rules, $rules);
+        array_push($this->rules, $rule);
         return $this;
     }
 
-    public function setLabel($label)
+    public function setLabel(string $label)
     {
         $this->label = $label;
         return $this;
@@ -43,7 +43,7 @@ Abstract class Input {
         }
     }
 
-    protected function attributesToString($attributes) 
+    protected function attributesToString(array $attributes) 
     {
         $string = '';
         

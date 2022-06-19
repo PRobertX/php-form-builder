@@ -23,8 +23,8 @@ class FormGenerator {
     
         echo '<form method="', $this->method, '" action="', $this->action, '">';
 
-            foreach ($this->fields as $field)
-                echo $field->getElement();
+        foreach ($this->fields as $field)
+            echo $field->getElement();
         
         echo '<input type="submit" />';
 

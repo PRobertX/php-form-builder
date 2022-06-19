@@ -7,13 +7,13 @@ class MinLenght {
     private $minLenght;
     private $errorMessage;
 
-    public function __construct($minLenght, $errorMessage)
+    public function __construct(int $minLenght, string $errorMessage)
     {
         $this->minLenght = $minLenght;
         $this->errorMessage = $errorMessage;
     }
 
-    public function validate($inputName)
+    public function validate(string $inputName)
     {
         if (strlen($_POST[$inputName]) < $this->minLenght) 
         {
