@@ -2,20 +2,20 @@
 namespace Rules;
 use FormBuilder\InputErrors as InputErrors;
 
-class MaxLenght {
+class MaxLength {
 
-    private $maxLenght;
+    private $maxLength;
     private $errorMessage;
 
-    public function __construct(int $maxLenght, string $errorMessage)
+    public function __construct(int $maxLength, string $errorMessage)
     {
-        $this->maxLenght = $maxLenght;
+        $this->maxLength = $maxLength;
         $this->errorMessage = $errorMessage;
     }
 
     public function validate(string $inputName)
     {
-        if (strlen($_POST[$inputName]) > $this->maxLenght) 
+        if (strlen($_POST[$inputName]) > $this->maxLength) 
         {
             InputErrors::set($inputName, $this->errorMessage);
         }

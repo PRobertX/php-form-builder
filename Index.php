@@ -10,8 +10,8 @@ $method = 'POST';
 $form = new Form($action, $method);
 
 
-$form->addField((new TextField('name'))->addRule(new Rules\MinLenght(3, 'Name too short'))
-                                        ->addRule(new Rules\MaxLenght(13, 'Name too long'))
+$form->addField((new TextField('name'))->addRule(new Rules\MinLength(3, 'Name too short'))
+                                        ->addRule(new Rules\MaxLength(13, 'Name too long'))
                                         ->setAttribute('required'));
 $form->addField(new TextField('phone_number'));
 $form->addField(new TextField('email_address'));

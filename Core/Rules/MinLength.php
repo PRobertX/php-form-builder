@@ -2,20 +2,20 @@
 namespace Rules;
 use FormBuilder\InputErrors as InputErrors;
 
-class MinLenght {
+class MinLength {
 
-    private $minLenght;
+    private $minLength;
     private $errorMessage;
 
-    public function __construct(int $minLenght, string $errorMessage)
+    public function __construct(int $minLength, string $errorMessage)
     {
-        $this->minLenght = $minLenght;
+        $this->minLength = $minLength;
         $this->errorMessage = $errorMessage;
     }
 
     public function validate(string $inputName)
     {
-        if (strlen($_POST[$inputName]) < $this->minLenght) 
+        if (strlen($_POST[$inputName]) < $this->minLength) 
         {
             InputErrors::set($inputName, $this->errorMessage);
         }
